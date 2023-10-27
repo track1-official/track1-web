@@ -8,13 +8,13 @@ import mainBannerImg from "../../../assets/image/mainBannerBackgroundImg.png";
 export default function MainBanner() {
   const navigate = useNavigate();
 
-  const bannerTexts = ["Tracks", "Vocals", "Producer"];
+  const bannerTexts = ["Tracks", "Chance", "Inspiration"];
   const [textIndex, setTextIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       textIndex === 2 ? setTextIndex(0) : setTextIndex(textIndex + 1);
-    }, 3000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, [textIndex]);
@@ -191,14 +191,14 @@ const Styled = {
     display: flex;
     justify-content: space-between;
 
-    width: 100%;
+    width: 102.5rem;
   `,
 
   AnimateText: styled.span`
     width: 47.4rem;
 
     text-align: center;
-    animation: animated-text 3s infinite;
+    animation: animated-text 4s infinite;
 
     @keyframes animated-text {
       0% {
