@@ -8,6 +8,7 @@ import { useRef } from "react";
 import AboutUs from "./aboutUs";
 import HowToUse from "./howToUse";
 import AboutMain from "./aboutMain";
+import MainHeader from "../main/renewal/mainHeader";
 
 export default function About() {
   const aboutSectionRef = useRef<HTMLTableSectionElement>(null);
@@ -23,8 +24,7 @@ export default function About() {
 
   return (
     <>
-      {/* Hedaer */}
-
+      <MainHeader />
       <Styled.Container>
         {/* Main */}
         <AboutMain handleMoveAboutSection={handleMoveAboutSection} handleMoveHowToSection={handleMoveHowToSection} />
