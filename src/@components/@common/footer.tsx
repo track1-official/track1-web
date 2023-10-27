@@ -2,26 +2,24 @@ import { useRecoilState } from "recoil";
 import styled, { keyframes } from "styled-components";
 import { FacebookLogoIc, InstagramLogoIc } from "../../assets";
 import bannerImg from "../../assets/image/bannerImg.png";
-import { conventionType } from "../../core/convention/conventionType";
-import { openConventionModal, openConventionPolicy } from "../../recoil/conventionModal";
+import { CONVENTION_TYPE } from "../../core/common/convention/conventionType";
+import { openConventionModal } from "../../recoil/common/conventionModal";
 
 export default function Footer() {
-  const [policy, setPolicy] = useRecoilState<string>(openConventionPolicy);
-  const [showModal, setShowModal] = useRecoilState<boolean>(openConventionModal);
+  const [conventionModalInform, setConventionModalInform] = useRecoilState(openConventionModal);
 
-  function openModal(conventionType: string) {
-    setPolicy(conventionType);
-    setShowModal(true);
+  function openModal(policyCategory: string) {
+    setConventionModalInform({ policy: policyCategory, isOpen: true });
   }
 
   return (
     <FooterContainer>
-      <Banner />
+      {/* <Banner /> */}
       <FooterTextWrapper>
-        <Text isGray={false} isStrong={true} marginRight={2.4} onClick={() => openModal(conventionType.PERSONAL)}>
+        <Text isGray={false} isStrong={true} marginRight={2.4} onClick={() => openModal(CONVENTION_TYPE.PERSONAL)}>
           개인정보처리방침
         </Text>
-        <Text isGray={false} isStrong={false} marginRight={0} onClick={() => openModal(conventionType.USINGSITE)}>
+        <Text isGray={false} isStrong={false} marginRight={0} onClick={() => openModal(CONVENTION_TYPE.USINGSITE)}>
           서비스 이용약관
         </Text>
       </FooterTextWrapper>
@@ -30,11 +28,11 @@ export default function Footer() {
           Email
         </Text>
         <Text isGray={true} isStrong={false} marginRight={0}>
-          admin@track-1.link{" "}
+          admin@track-1.link
         </Text>
       </FooterTextWrapper>
       <LogoWrapper>
-        <a href="https://www.instagram.com/track1.kr/">
+        <a href="https://www.instagram.com/track1.official/">
           <InstagramLogoIcon />
         </a>
         <a href="https://www.facebook.com/people/Track-1/100088269640316/">
@@ -46,6 +44,10 @@ export default function Footer() {
 }
 
 const FooterContainer = styled.footer`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   width: 100%;
   height: 29rem;
 
