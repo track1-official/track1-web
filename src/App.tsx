@@ -1,7 +1,7 @@
 import { BrowserView, MobileView } from "react-device-detect";
 import { RecoilRoot } from "recoil";
 import { ThemeProvider } from "styled-components";
-import MobileAlertPage from "./@pages/mobileAlertPage";
+import MobileLandingPage from "./@pages/mobileLandingPage";
 import Router from "./Router";
 import { GlobalStyle } from "./style/globalStyle";
 import { theme } from "./style/theme";
@@ -17,7 +17,7 @@ function App() {
             <Router />
           </BrowserView>
           <MobileView>
-            <MobileAlertPage />
+            <MobileLandingPage />
           </MobileView>
         </ThemeProvider>
       </RecoilRoot>
