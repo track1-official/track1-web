@@ -27,8 +27,8 @@ export default function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/main" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
+        {/* <Route path="/main" element={<HomePage />} /> */}
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/event" element={<EventPage />} />
         <Route path="/event/:eventId" element={<EventPage />} />
