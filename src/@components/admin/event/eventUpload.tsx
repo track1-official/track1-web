@@ -33,7 +33,6 @@ export default function EventUpload() {
     formData.append("eventIntroduction", introduction);
 
     uploadEvent(formData);
-    console.log(formData);
   }
 
   return (
