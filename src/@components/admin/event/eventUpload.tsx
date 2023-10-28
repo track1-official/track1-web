@@ -97,8 +97,6 @@ const Styled = {
     justify-content: center;
 
     width: 100%;
-
-    padding-top: 14.3rem;
   `,
 
   InputContainer: styled.div`

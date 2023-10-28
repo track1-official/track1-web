@@ -109,6 +109,7 @@ const Styled = {
       position: absolute;
       background: url(${aboutBackgroundImg});
       background-repeat: no-repeat;
+      background-size: cover;
     }
   `,
 
