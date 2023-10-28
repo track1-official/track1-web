@@ -67,7 +67,10 @@ const Styled = {
   DivisionLine: styled.hr`
     width: 100%;
 
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 50.02%, rgba(255, 255, 255, 0) 100%);
+    border: 0.1rem solid ${({ theme }) => theme.colors.white};
+
+    border-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 50.02%, rgba(255, 255, 255, 0) 100%);
+    border-image-slice: 1;
   `,
 
   HeadingText: styled.h1`
