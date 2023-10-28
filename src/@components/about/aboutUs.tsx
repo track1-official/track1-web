@@ -56,11 +56,6 @@ export default function AboutUs(props: AboutUsProps) {
 }
 
 const Styled = {
-  Container: styled.main`
-    width: 100%;
-    height: 100%;
-  `,
-
   TapMenuWrapper: styled.ul`
     display: flex;
     justify-content: center;
@@ -95,7 +90,6 @@ const Styled = {
 
   AboutSection: styled.section`
     width: 100%;
-    height: 393rem;
 
     margin-top: 8rem;
   `,
