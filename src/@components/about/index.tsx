@@ -1,8 +1,4 @@
 import styled from "styled-components";
-import Header from "../@common/header";
-import mainSectionBackgroundImg from "../../assets/image/mainSectionBackgroundImg.png";
-import laptopImg from "../../assets/image/laptopImg.png";
-import aboutBackgroundImg from "../../assets/image/aboutBackgroundImg.png";
 import Footer from "../@common/footer";
 import { useRef } from "react";
 import AboutUs from "./aboutUs";
@@ -25,22 +21,14 @@ export default function About() {
   return (
     <>
       <MainHeader />
-      <Styled.Container>
-        {/* Main */}
-        <AboutMain handleMoveAboutSection={handleMoveAboutSection} handleMoveHowToSection={handleMoveHowToSection} />
-        {/* About us */}
-        <AboutUs scrollRef={aboutSectionRef} />
-        {/* How to use */}
-        <HowToUse scrollRef={howToSectionRef} />
-      </Styled.Container>
+      {/* Main */}
+      <AboutMain handleMoveAboutSection={handleMoveAboutSection} handleMoveHowToSection={handleMoveHowToSection} />
+      {/* About us */}
+      <AboutUs scrollRef={aboutSectionRef} />
+      {/* How to use */}
+      <HowToUse scrollRef={howToSectionRef} />
+
       <Footer />
     </>
   );
 }
-
-const Styled = {
-  Container: styled.main`
-    width: 100%;
-    height: 100%;
-  `,
-};

@@ -30,8 +30,8 @@ const Styled = {
     height: 143rem;
 
     background: url(${mainSectionBackgroundImg});
-    /* background-size: 192rem; */
     background-repeat: no-repeat;
+    background-size: cover;
   `,
 
   MainSectionWrapper: styled.div`
