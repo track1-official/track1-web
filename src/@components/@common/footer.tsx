@@ -12,6 +12,8 @@ export default function Footer() {
     setConventionModalInform({ policy: policyCategory, isOpen: true });
   }
 
+  console.log(conventionModalInform);
+
   return (
     <FooterContainer>
       {/* <Banner /> */}
